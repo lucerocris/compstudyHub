@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/learn.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CompStudy Hub - Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h2>CompStudy Hub</h2>
+      <ul class="nav">
+        <li>
+          <a href="index.html" class="nav-link">
+            <div class="nav-text">Home</div>
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-link">
+            <div class="nav-text">About</div>
+          </a>
+        </li>
+        <li>
+          <a href="portfoliohub.html" class="nav-link">
+            <div class="nav-text">Portfolio Hub</div>
+          </a>
+        </li>
+        <li>
+          <a href="learn.html" class="nav-link">
+            <div class="nav-text">Learn</div>
+          </a>
+        </li>
+        <li>
+          <a href="resources.html" class="nav-link">
+            <div class="nav-text">Resources</div>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <div class="main-container">
+      <div class="intro-text">
+        <h1>Learning Hub</h1>
+        <p>Test your knowledge with our portfolio quizzes</p>
+      </div>
+      <div class="learning-tools-container">
+        <div class="quizcards-container">
+          <div class="quizcard card1">
+            <h2>Portfolio Quiz</h2>
+            <!-- start Quiz button -->
+            <div class="start_btn"><button>Start Quiz</button></div>
+
+            <!-- Info Box -->
+            <div class="info_box">
+              <div class="info-title"><span>Some Rules of this Quiz</span></div>
+              <div class="info-list">
+                <div class="info">
+                  1. You will have only <span>15 seconds</span> per each
+                  question.
+                </div>
+                <div class="info">
+                  2. Once you select your answer, it can't be undone.
+                </div>
+                <div class="info">
+                  3. You can't select any option once time goes off.
+                </div>
+                <div class="info">
+                  4. You can't exit from the Quiz while you're playing.
+                </div>
+                <div class="info">
+                  5. You'll get points on the basis of your correct answers.
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="quit">Exit Quiz</button>
+                <button class="restart">Continue</button>
+              </div>
+            </div>
+
+            <!-- Quiz Box -->
+            <div class="quiz_box">
+              <div class="quiz-header">
+                <div class="title">Quiz!!!</div>
+                <div class="timer">
+                  <div class="time_left_txt">Time Left</div>
+                  <div class="timer_sec">15</div>
+                </div>
+                <div class="time_line"></div>
+              </div>
+
+              <section>
+                <div class="que_text">
+                  <!-- Here I've inserted question from JavaScript -->
+                </div>
+                <div class="option_list">
+                  <!-- Here I've inserted options from JavaScript -->
+                </div>
+              </section>
+
+              <!-- footer of Quiz Box -->
+              <footer>
+                <div class="total_que">
+                  <!-- Here I've inserted Question Count Number from JavaScript -->
+                </div>
+                <button class="next_btn">Next Que</button>
+              </footer>
+            </div>
+
+            <!-- Result Box -->
+            <div class="result_box">
+              <div class="icon">
+                <i class="fas fa-crown"></i>
+              </div>
+              <div class="complete_text">You've completed the Quiz!</div>
+              <div class="score_text">
+                <!-- Here I've inserted Score Result from JavaScript -->
+              </div>
+              <div class="buttons">
+                <button class="restart">Replay Quiz</button>
+                <button class="quit">Quit Quiz</button>
+              </div>
+            </div>
+
+            <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+            <script src="./JS/questions.js"></script>
+
+            <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+            <script src="./JS/script.js"></script>
+          </div>
+        </div>
+        <div class="pomodoro-container">
+          <div class="pomodoro">
+            <h1>Pomodoro Timer</h1>
+            <div id="timer">25:00</div>
+            <div class="controls">
+              <button id="start">Start</button>
+              <button id="pause">Pause</button>
+              <button id="reset">Reset</button>
+            </div>
+          </div>
+          <div class="download-material">
+            <h2>Download Materials Here:</h2>
+            <ul>
+              <li>
+                <a href="./portfolios/portfolio1.pdf" download>Portfolio #1</a>
+              </li>
+              <li>
+                <a href="./portfolios/portfolio2.pdf" download>Portfolio #2</a>
+              </li>
+              <li>
+                <a href="./portfolios/portfolio3.pdf" download>Portfolio #3</a>
+              </li>
+              <li>
+                <a href="./portfolios/portfolio4.pdf" download>Portfolio #4</a>
+              </li>
+              <li>
+                <a href="./portfolios/portfolio5.pdf" download>Portfolio #5</a>
+              </li>
+              <li>
+                <a href="./portfolios/portfolio6.pdf" download>Portfolio #6</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script src="./JS/pomodoro.js"></script>
+    </div>
+  </body>
+</html>

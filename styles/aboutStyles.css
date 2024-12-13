@@ -228,6 +228,7 @@ body {
 @media screen and (max-width: 768px) {
   .section2 {
     flex-direction: column;
+    height: auto;
   }
   .hamburger {
     display: block;
@@ -258,6 +259,7 @@ body {
 
   .vision .mission {
     width: 100vw !important;
+    max-height: 30rem !important;
   }
 
   .vision-mission-container {
@@ -284,9 +286,11 @@ body {
   }
 
   .author-container {
-    margin-top: 20rem;
+    margin-top: 3rem;
     width: 80vw;
   }
+
+  
 
 
   .nav {

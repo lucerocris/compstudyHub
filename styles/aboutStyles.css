@@ -206,3 +206,120 @@ body {
 .author-container p {
   margin-left: 2rem;
 }
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .section2 {
+    flex-direction: column;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .about-container {
+    width: 100vw;
+  }
+
+  .about-text {
+    width: 70%;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 13px;
+  }
+
+  .about-text h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .vision-text, .mission-text {
+    font-size: small;
+    padding: 20px;
+  }
+
+  .vision .mission {
+    width: 100vw !important;
+  }
+
+  .vision-mission-container {
+    width: 100vw;
+    padding: 0;
+  }
+
+  .author-container {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .author-text {
+    font-size: small;
+    padding: 20px;
+  }
+
+
+  img {
+    width:80% !important;
+    height: 250px !important;
+
+  }
+
+  .author-container {
+    margin-top: 20rem;
+    width: 80vw;
+  }
+
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--background-light);
+    flex-direction: column;
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav li {
+    margin: 20px 0;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+}

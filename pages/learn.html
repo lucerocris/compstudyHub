@@ -19,6 +19,11 @@
   <body>
     <header>
       <h2>CompStudy Hub</h2>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav">
         <li>
           <a href="../index.html" class="nav-link">
@@ -26,22 +31,22 @@
           </a>
         </li>
         <li>
-          <a href="about.html" class="nav-link">
+          <a href="../pages/about.html" class="nav-link">
             <div class="nav-text">About</div>
           </a>
         </li>
         <li>
-          <a href="portfoliohub.html" class="nav-link">
+          <a href="../pages/portfoliohub.html" class="nav-link">
             <div class="nav-text">Portfolio Hub</div>
           </a>
         </li>
         <li>
-          <a href="learn.html" class="nav-link">
+          <a href="../pages/learn.html" class="nav-link">
             <div class="nav-text">Learn</div>
           </a>
         </li>
         <li>
-          <a href="resources.html" class="nav-link">
+          <a href="../pages/resources.html" class="nav-link">
             <div class="nav-text">Resources</div>
           </a>
         </li>
@@ -175,4 +180,23 @@
       <script src="../JS/pomodoro.js"></script>
     </div>
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('.nav');
+    
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    
+      
+      document.addEventListener('click', function(event) {
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+          hamburger.classList.remove('active');
+          nav.classList.remove('active');
+        }
+      });
+    });
+     </script>
 </html>

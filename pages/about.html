@@ -4,39 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/aboutStyles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>CompStudy Hub - About</title>
   </head>
   <body>
     <header>
       <h2>CompStudy Hub</h2>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav">
         <li>
-          <a href="../index.html" class="nav-link"
-            ><div class="nav-text">Home</div></a
-          >
+          <a href="../index.html" class="nav-link">
+            <div class="nav-text">Home</div>
+          </a>
         </li>
         <li>
-          <a href="about.html" class="nav-link"
-            ><div class="nav-text">About</div></a
-          >
+          <a href="../pages/about.html" class="nav-link">
+            <div class="nav-text">About</div>
+          </a>
         </li>
         <li>
-          <a href="portfoliohub.html" class="nav-link"
-            ><div class="nav-text">Portfolio Hub</div></a
-          >
+          <a href="../pages/portfoliohub.html" class="nav-link">
+            <div class="nav-text">Portfolio Hub</div>
+          </a>
         </li>
         <li>
-          <a href="learn.html" class="nav-link"
-            ><div class="nav-text">Learn</div></a
-          >
+          <a href="../pages/learn.html" class="nav-link">
+            <div class="nav-text">Learn</div>
+          </a>
         </li>
         <li>
-          <a href="resources.html" class="nav-link"
-            ><div class="nav-text">Resources</div></a
-          >
+          <a href="../pages/resources.html" class="nav-link">
+            <div class="nav-text">Resources</div>
+          </a>
         </li>
       </ul>
     </header>
@@ -105,13 +113,34 @@
         </div>
         <div class="author-container">
           <img src="../images/STUDIO_SOLO_IAN_12.10.23-7394 (1).jpg" />
-          <h2>About me</h2>
-          <p>
-            Hi! I'm Cris Lawrence Lucero, a 19-year-old Computer Science student
-            at the University of San Carlos. Based in Cebu City.
-          </p>
+          <div class="author-text">
+            <h2>About me</h2>
+            <p>
+              Hi! I'm Cris Lawrence Lucero, a 19-year-old Computer Science
+              student at the University of San Carlos. Based in Cebu City.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        }
+      });
+    });
+  </script>
 </html>

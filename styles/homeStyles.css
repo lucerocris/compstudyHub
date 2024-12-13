@@ -204,3 +204,116 @@
     transform: scale(1.05);
   }
 
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+
+
+  
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100vh;
+      background-color: var(--background-light);
+      flex-direction: column;
+      padding-top: 80px;
+      transition: right 0.3s ease;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav.active {
+      right: 0;
+    }
+  
+    .nav li {
+      margin: 20px 0;
+    }
+  
+    /* Hamburger Animation */
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+  
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  
+    /* Hero Section */
+    .hero {
+      padding: 60px 20px;
+      margin-top: 3rem;
+    }
+  
+    .hero-text {
+      width: 100%;
+      padding: 0 20px;
+    }
+  
+    /* Portfolio Cards */
+    .portfolioCards-container {
+      padding: 20px;
+      height: auto;
+    }
+  
+    .c {
+      width: 100%;
+      height: auto;
+      padding: 2rem;
+      margin: 1rem 0;
+      flex-direction: co;
+    }
+  
+    img {
+      width: 150px;
+      height: 150px;
+      margin: 1.5rem auto;
+    }
+  
+    .pic {
+      width: 180px;
+      height: 180px;
+      margin: 1.5rem auto;
+    }
+  
+    .community img,
+    .motherboard img,
+    .computer img {
+      margin: 1.5rem auto;
+    }
+  
+    .card-button {
+      position: relative;
+      margin: 20px auto 0;
+      right: auto;
+      bottom: auto;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }

@@ -62,7 +62,7 @@ header h1 {
 }
 
 .nav-link::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   height: 2px;
@@ -174,11 +174,8 @@ img {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
 
+@media (max-width: 768px) {
   .hamburger {
     display: block;
   }
@@ -201,9 +198,20 @@ img {
   }
 
   .nav li {
-    margin: 15px 0;
-    width: 100%;
-    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
   }
 
   .resources-container {
